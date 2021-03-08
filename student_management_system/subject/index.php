@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="index.php">CREATE NEW SUBJECT</a>
+    <a href="create.php">CREATE NEW SUBJECT</a>
     <?php
         $con=mysqli_connect($host='localhost',$user='root',$password='',$database='studentinfo',$port='3308');
         if($con){
