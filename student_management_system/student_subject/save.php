@@ -10,7 +10,9 @@ if($con){
              $result=mysqli_query($con,$sql);
              foreach($subject as $v1){
                 $sql1="INSERT INTO stdata_subjects(studentid,subjectid) VALUES ($sid ,$v1)";
-                $result=mysqli_query($con,$sql1); 
+                $result=mysqli_query($con,$sql1);
+                header("Location: http://aaron.com/student_management_system/student_subject/index.php");
+               
              }     
         }
         else{
