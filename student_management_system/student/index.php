@@ -1,3 +1,6 @@
+<?php
+require_once('../config.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +11,7 @@
 </head>
 <body>
 <?php
-$con=mysqli_connect($host = 'localhost', $user = 'root', $password = '', $database = 'studentinfo', $port = 3308 );
-    if($con){
-      
-      
+
         $sql="SELECT studentdeatils.id,studentdeatils.firstname,studentdeatils.lastname,studentdeatils.gender,studentdeatils.subject,stdata.gname,stdata.gorder,studentdeatils.address 
         FROM studentdeatils 
         INNER JOIN stdata ON studentdeatils.grade=stdata.id  " ;
@@ -58,12 +58,6 @@ $con=mysqli_connect($host = 'localhost', $user = 'root', $password = '', $databa
 ?>
     </table>
 
-<?php
-    }else{
-        echo "connection failed";
-    }
-    
-?>
 
 </body>
 </html>
