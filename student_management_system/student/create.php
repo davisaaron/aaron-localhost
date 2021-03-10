@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -36,9 +37,7 @@ if(isset($_POST['fname'])){
 
 ?>
 <?php
-   $con=mysqli_connect($host = 'localhost', $user = 'root', $password = '', $database = 'studentinfo', $port = 3308 );
-
-    if($con){
+   require_once('../config.php');
        
         $sql = "SELECT * FROM stdata ";
         $s="SELECT * FROM subjects";
@@ -69,7 +68,7 @@ if(isset($_POST['fname'])){
                         <br><br>
                         
                         
-                        <label >SUBJECT</label><br>
+                        <label >SUBJECT</label><a href="http://aaron.com/student_management_system/subject/create.php">ADD SUBJECT</a><br>
                             <?php
                             while($row1=mysqli_fetch_array($res)){
                             ?>
@@ -85,7 +84,7 @@ if(isset($_POST['fname'])){
                         <input type="checkbox" name="sub[]" id="science" value="science">
                         <label for="science">Science</label><br> -->
                         <br><br>
-                        <label for="grade">CLASS</label>
+                        <label for="grade">CLASS</label><a href="http://aaron.com/student_management_system/grade/create.php">ADD GRADE</a><br>
                         <select name="grade" id="grade" >
                             <?php
                             while($row=mysqli_fetch_array($result)){
@@ -115,8 +114,8 @@ if(isset($_POST['fname'])){
                         <input type="submit">
                         <a href="index.php">SHOW ENTRY</a>
                         <br>
-                        <a href="http://aaron.com/student_management_system/grade/index.php">VIEW GRADE</a>
-                        <a href="http://aaron.com/student_management_system/subject/index.php">VIEW SUBJECT</a>
+                        
+                        
 
 
                 </form>
@@ -125,13 +124,7 @@ if(isset($_POST['fname'])){
         </tr>
                             
     </table>
-    <?php
-    }else{
-        echo "connection lost";
-    }
-
-    ?>
-
+       
 </body>
-
 </html>
+

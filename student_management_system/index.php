@@ -68,6 +68,10 @@ element.style {
     border-color: #4e555b;
     width: 100%;
     }
+    .main{
+      margin-left: 200px;
+      padding: 10px 10px;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +97,7 @@ $rowcount2=mysqli_num_rows($result2);
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="http://aaron.com/student_management_system/student/">View Student(<?php echo $rowcount?>)</a>
-    <a class="dropdown-item" href="http://aaron.com/student_management_system/student/create.php">Create Student</a>
+    <a class="dropdown-item" href="student/create.php">Create Student</a>
   </div>
 </div>
 <br>
@@ -118,6 +122,8 @@ $rowcount2=mysqli_num_rows($result2);
 </div>
 </div>
 </div>
+<div class="main">
 
+</div>
 </body>
 </html>
