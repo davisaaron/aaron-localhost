@@ -44,6 +44,7 @@ element.style {
     position: fixed;
     z-index: 1;
     top: 0;
+    margin-left: 1281px;
     left: 0;
     background-color: gray;
     overflow-x: hidden;
