@@ -3,6 +3,14 @@ require_once('../config.php');
 require_once('./../include/header.php');
 require_once('./../include/sidebar.php');
 ?>
+<style>
+.ad{
+    margin-left: 1227px;
+    padding-top: 140px;
+    position: fixed;
+}
+</style>
+<div class="ad">
 <?php
    $con=mysqli_connect($host = 'localhost', $user = 'root', $password = '', $database = 'studentinfo', $port = 3308 );
 
@@ -32,4 +40,6 @@ require_once('./../include/sidebar.php');
     }
 
     ?>
+
     
+</div>

@@ -34,6 +34,7 @@
         .sidenav{
             height:100% ;
             width: 20%;
+          /* //  margin-left: 1200px; */
             background-color: gray;
             position: fixed;
         }

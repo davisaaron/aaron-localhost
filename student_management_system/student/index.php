@@ -2,6 +2,7 @@
 require_once('../config.php');
 require_once('./../include/header.php');
 require_once('./../include/sidebar.php');
+// require_once('./show.php');
 ?>
 
 <?php
@@ -9,14 +10,12 @@ require_once('./../include/sidebar.php');
         $sql="SELECT studentdeatils.id,studentdeatils.firstname,studentdeatils.lastname,studentdeatils.gender,studentdeatils.subject,stdata.gname,stdata.gorder,studentdeatils.address 
         FROM studentdeatils 
         INNER JOIN stdata ON studentdeatils.grade=stdata.id  " ;
-        $result = mysqli_query($con,$sql);
-
-    
-        
+        $result = mysqli_query($con,$sql);  
 ?>
 <style>
      .st{ 
-        margin-left: 500px;
+        margin-left: 400px;
+        padding-top: 100px;
     } 
 </style>
 <div class="st">
