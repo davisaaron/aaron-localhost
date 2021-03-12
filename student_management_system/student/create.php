@@ -1,5 +1,7 @@
 <?php
-include ('../index.php');
+require_once('../config.php');
+require_once('./../include/header.php');
+require_once('./../include/sidebar.php');
 ?>
 <?php
 if(isset($_POST['fname'])){
@@ -40,10 +42,14 @@ if(isset($_POST['fname'])){
         $res1 = mysqli_query($con,$s1);
         $result = mysqli_query($con,$sql);
 ?>
-
-   
-    
-    <table border="1" >
+<style>
+     .st{ 
+        margin-left: 500px;
+       
+    } 
+</style>
+<div class="st">
+<table border="1" style="height :70%;">
         <th>Student Registation Form</th>
         <tr>
             <td>
@@ -118,6 +124,11 @@ if(isset($_POST['fname'])){
         </tr>
                             
     </table>
-       
+</div>   
+    
+    
+<?php
+require_once('./../include/footer.php');
+?>       
 
 

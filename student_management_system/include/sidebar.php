@@ -77,6 +77,8 @@
 </head>
 <body>
     <?php
+        $con=mysqli_connect($host='localhost',$user='root',$password='',$database='studentinfo',$port=3308);
+
         $sql="SELECT * FROM studentdeatils";
         $result = mysqli_query($con,$sql);
         $rowcount=mysqli_num_rows($result);
@@ -98,7 +100,7 @@
             STUDENT
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="http://aaron.com/student_management_system/student/">View Student(<?php echo $rowcount?>)</a>
+            <a class="dropdown-item" href="student/index.php">View Student(<?php echo $rowcount?>)</a>
             <a class="dropdown-item" href="student/create.php">Create Student</a>
             </div>
         </div>

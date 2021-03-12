@@ -1,5 +1,7 @@
 <?php
-include ('../index.php');
+require_once('../config.php');
+require_once('./../include/header.php');
+require_once('./../include/sidebar.php');
 ?>
 <?php
    $con=mysqli_connect($host = 'localhost', $user = 'root', $password = '', $database = 'studentinfo', $port = 3308 );
@@ -30,3 +32,4 @@ include ('../index.php');
     }
 
     ?>
+    
