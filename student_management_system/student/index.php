@@ -1,6 +1,7 @@
 <?php
 require_once('../config.php');
-include('../index.php');
+require_once('./../include/header.php');
+require_once('./../include/sidebar.php');
 ?>
 
 <?php
@@ -13,8 +14,14 @@ include('../index.php');
     
         
 ?>
+<style>
+     .st{ 
+        margin-left: 500px;
+    } 
+</style>
+<div class="st">
 <a href="create.php">CREATE NEW ENTRY</a>
-    <table border="2" ;style="width:100%";color:gray>
+    <table border="2" ;style="width:100%;";color:gray>
         <th colspan="12" style="color:red;">Student Info</th>
         <tr>
             <th>ID</th>
@@ -51,4 +58,9 @@ include('../index.php');
 ?>
     </table>
 
+</div>
 
+<?php
+
+require_once('./../include/footer.php');
+?>
