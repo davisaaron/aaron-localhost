@@ -15,9 +15,9 @@ if(isset($_POST['fname'])){
         $subject=$_POST['sub'];
         
         $grade=$_POST['grade'];
-        $section=$_POST['sec'];
+        
         $address=$_POST['address'];
-        $sql="INSERT INTO studentdeatils(firstname, lastname, gender,  grade, section, `address`) VALUES ('$fname','$lname','$gender','$grade','$section','$address')";
+        $sql="INSERT INTO studentdeatils(firstname, lastname, gender,  grade, `address`) VALUES ('$fname','$lname','$gender','$grade','$address')";
         $Result=mysqli_query($con,$sql);
         $lid=mysqli_insert_id($con);
 
@@ -84,7 +84,7 @@ if(isset($_POST['fname'])){
                         <input type="checkbox" name="sub[]" id="science" value="science">
                         <label for="science">Science</label><br> -->
                         <br><br>
-                        <label for="grade">CLASS</label><a href="http://aaron.com/student_management_system/grade/create.php">ADD GRADE</a><br>
+                        <label for="grade">CLASS</label>
                         <select name="grade" id="grade" >
                             <?php
                             while($row=mysqli_fetch_array($result)){
@@ -96,17 +96,7 @@ if(isset($_POST['fname'])){
                             ?>
                             
                         </select>
-                        <select name="sec" id="grade" >
-                      
-                        <?php
-                            while($ro=mysqli_fetch_array($res1)){
-                            ?>
-                            <option value="<?php echo $ro['id'];?>"><?php echo $ro['gorder'];?></option>
-                            
-                            <?php
-                            }
-                            ?>
-                        </select>
+                        <a href="http://aaron.com/student_management_system/grade/create.php">ADD GRADE</a>
                         <br><br>
                         <label for="address">ADDRESS</label>
                         <textarea name="address" id="address"></textarea>

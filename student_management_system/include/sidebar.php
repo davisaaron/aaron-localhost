@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,31 +94,52 @@
         
     <div class="sidenav">
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            STUDENT
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="student/index.php">View Student(<?php echo $rowcount?>)</a>
-            <a class="dropdown-item" href="student/create.php">Create Student</a>
+            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center" ">
+                    <span class="menu-collapsed">Students</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id='submenu1' class="collapse sidebar-submenu">
+                <a href="http://aaron.com/student_management_system/student/create.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Create Students</span>
+                </a>
+                <a href="http://aaron.com/student_management_system/student/index.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Student List (<?php echo $rowcount; ?>)</span>
+                </a>
             </div>
         </div>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            GRADE
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="http://aaron.com/student_management_system/grade/index.php">View Grade(<?php echo $rowcount1?>)</a>
-            <a class="dropdown-item" href="http://aaron.com/student_management_system/grade/create.php">Create Grade</a>
-            </div>
+        <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Grades</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id='submenu2' class="collapse sidebar-submenu">
+                <a href="http://aaron.com/student_management_system/grade/create.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Create Grade</span>
+                </a>
+                <a href="http://aaron.com/student_management_system/grade/index.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Grades List (<?php echo $rowcount2; ?>)</span>
+                </a>
+            </div> 
         </div>
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            SUBJECT
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="http://aaron.com/student_management_system/subject/index.php">View Subject(<?php echo $rowcount?>)</a>
-            <a class="dropdown-item" href="http://aaron.com/student_management_system/subject/create.php">Create Subject</a>
-            </div>
+        <a href="#submenu3" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">Subjects</span>
+                    <span class="submenu-icon ml-auto"></span>
+                </div>
+            </a>
+            <div id='submenu3' class="collapse sidebar-submenu">
+                <a href="http://aaron.com/student_management_system/subject/create.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Create Subject</span>
+                </a>
+                <a href="http://aaron.com/student_management_system/subject/index.php" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed">Subjects List (<?php echo $rowcount2; ?>)</span>
+                </a>
+            </div>  
         </div>
     </div>
 </body>

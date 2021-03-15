@@ -2,7 +2,7 @@
 require_once('../config.php');
 require_once('./../include/header.php');
 require_once('./../include/sidebar.php');
-// require_once('./show.php');
+
 ?>
 
 <?php
@@ -14,52 +14,53 @@ require_once('./../include/sidebar.php');
 ?>
 <style>
      .st{ 
-        margin-left: 400px;
-        padding-top: 100px;
+        margin-left: 410px;
+        margin-right: 100px;
     } 
 </style>
+<h1 style="color:red;margin-left:360px ;padding-top: 50px;">Student Info</h1>
+<hr style="border:  solid red;margin-left:360px ;margin-right:10px;">
+
 <div class="st">
-<a href="create.php">CREATE NEW ENTRY</a>
-    <table border="2" ;style="width:100%;";color:gray>
-        <th colspan="12" style="color:red;">Student Info</th>
+<table class="table table-hover">
+    <thead>
         <tr>
-            <th>ID</th>
-            <th>first name</th>
-            <th>last name</th>
-            <th>gender</th>
-            <th>subject</th>
-            <th>grade</th>
-            <th>section</th>
-            <th>address</th>
-            <th colspan="3">Action</th>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Grade</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Address</th>
+            <th colspan="3" style="text-align: center;">Action</th>
             
 
         </tr>
+    </thead>
 <?php
     while($row = mysqli_fetch_assoc($result)){
 ?> 
-       <tr>
-        <td><?php echo $row['id']; ?></td>
-        <td><?php echo $row['firstname']; ?></td>
-        <td><?php echo $row['lastname']; ?></td>
-        <td><?php echo $row['gender']; ?></td>
-        <td><a href="http://aaron.com/student_management_system/student_subject/index.php?id=<?php echo $row['id']; ?>">show</a></td>
-        <td><?php echo $row['gname']; ?></td>
-        <td><?php echo $row['gorder']; ?></td>
-        <td><?php echo $row['address']; ?></td>
-        <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
-        <td><a href="show.php?id=<?php echo $row['id']; ?>">Show</a></td>
-        <td><a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a></td>
-       </tr>
+   <tbody>
+        <tr> 
+            <td><?php echo $row['id']; ?></td>
+            <td><?php echo $row['firstname']; ?></td>
+            <td><?php echo $row['lastname']; ?></td>
+            <td><?php echo $row['gender']; ?></td>
+            <td><?php echo $row['gname']; ?></td>
+            <td><a href="./../student_subject/index.php?id=<?php echo $row['id']; ?>">Show</a></td>
+            <td><?php echo $row['address']; ?></td>
+            <td><a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a></td>
+            <td><a href="show.php?id=<?php echo $row['id']; ?>">Show</a></td>
+            <td><a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a></td>
+        </tr>
+        
+    <tbody>
 
 <?php        
     }
 ?>
     </table>
 
-</div>
-
 <?php
-
 require_once('./../include/footer.php');
 ?>

@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     
 </head>
 <body>
     <div class="header">
     
         <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand">Student Management System</a>
+            <a class="navbar-brand" href="http://aaron.com/student_management_system">Student Management System</a>
             <form class="form-inline">
             ` <ul class="nav justify-content-end">
                 <li class="nav-item">
